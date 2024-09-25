@@ -2,14 +2,14 @@
     <ul class="list-unstyled" id="todo">
         <% for(let todo of todos) { %> 
             <li>
-                <div class="alert <%= todo.completed ? 'alert-success' : 'alert-secondary'  %> ">
+                <div class="alert <%= todo.IsDone ? 'alert-success' : 'alert-secondary'  %> ">
                     <% if(todo.IsDone) {%>
                         <del><%= todo.Description %> </del>
-                        <a href="/admin/delete-todo/<%= todo.id %> " class="close fa fa-trash" style="color: red"></a>
+                        <a href="/admin/delete-todo/<%= todo.Id %> " class="close fa fa-trash" style="color: red"></a>
                     <% } else { %> 
                         <%= todo.Description %> 
-                        <a href="/admin/delete-todo/<%= todo.id %> " class="close fa fa-trash" style="color: red"></a>
-                        <a href="/admin/completed-todo/<%= todo.id %> " class="close fa fa-check-square mr-2" style="color: green"></a>
+                        <a href="/admin/delete-todo/<%= todo.Id %> " class="close fa fa-trash" style="color: red"></a>
+                        <a href="/admin/completed-todo/<%= todo.Id %> " class="close fa fa-check-square mr-2" style="color: green"></a>
                     <% } %> 
                 </div>
             </li>
